@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="fixed w-full">
+        <div class =" flex pl-20 pt-5 pb-5   bg-gray-400 place-content-between">
+        
+           <a href="menu.html"> <div class="pr-96">Menu</div></a>
+            <div class = "flex pr-20 ">
+              <a href="login.html"> <div id="login" class ="   pr-10">Sign In</div></a> 
+               <a href="signup.html"><div class ="  pr-10">Sign Up</div></a> 
+            </div>
+           
+            
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+
+<script>
+          
+    let signup = document.getElementById("signup");   
+    let name = JSON.parse(window.localStorage.getItem("foodlogin"));
+    console.log(name);
+
+    let login = document.getElementById("login");
+      
+    if(name == null) { 
+       login.textContent = "Login";
+    } else {        
+       login.textContent = name;
+    }
+    
+  
+</script>
